@@ -1,29 +1,5 @@
---------------------- Tema 1 SO - Adina Grecu, 331CC --------------------------
+For the implementation of this project, I conducted thorough research to understand the specific functionalities of the libc library functions. I referred to man pages to grasp their working mechanisms (including the function declaration and its arguments).
 
-Pentru implementarea temei, m-am documentat pentru a afla ce fac concret 
-functiile din biblioteca libc. Am consultat man pages pentru acestea pentru a 
-intelege mecanismul de functionare (si pentru puts pentru a vedea declararea
-functiei si ce argumente primeste). Pentru manipularea stringurilor (functii 
-din string.c), in general, am iterat prin fiecare string in parte si am facut 
-compararile/atriburile necesare pe fiecare caracter in parte cu mentiunea ca 
-functiile memcmp, memset si memmove au necesitat cast la char* pentru a fi 
-posibila manipularea datelor.
+Regarding string manipulation functions (string.c), I iterated through each string character and performed the necessary comparisons or assignments. It's worth mentioning that functions like memcmp, memset, and memmove required casting to char* for data manipulation.
 
-Pentru functiile din io, stat si mm am facut apeluri de sistem. M-am documentat 
-pentru a afla care sunt parametrii necesari syscall-ului pentru fiecare functie 
-in parte si am facut verificari pentru a valida argumentele primite si diferite 
-erori posibile (pentru fisiere). Argumentul pentru numarul syscall-ului l-am 
-luat din syscall_list. 
-
-Surse:
-Am folosit chat gpt pentru a intelege ce fac functiile si care este 
-comportamentul lor in realitate, ce posibile erori trebuie tratate si cum se 
-trateaza acestea, cum functioneaza codurile de eroare si cum functioneaza 
-argumentele variabile.
-
-Pentru malloc si free m-am folosit de: 
-https://stackoverflow.com/questions/8475609/implementing-your-own-malloc-free-with-mmap-and-munmap
-
-Pentru structura timespec m-am documentat pe internet si pentru modul de
-functionare al functiei sleep am consultat chat gpt. Pentru scheletul
-headerului time.h am urmat modelul celorlalte headere din tema.
+For io, stat, and mm functions, I utilized system calls. I researched the required parameters for each specific syscall and included validations for received arguments and potential errors (especially for file-related operations). The syscall numbers were obtained from the syscall_list.
